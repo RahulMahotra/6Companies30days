@@ -1,4 +1,4 @@
- vector<vector<string> > Anagrams(vector<string>& string_list) {
+vector<vector<string> > Anagrams(vector<string>& string_list) {
         
         int n = string_list.size();
         
@@ -10,14 +10,10 @@
             
             sort(temp.begin(),temp.end());
             
-            if(mp.find(temp) != mp.end()){
-                mp[temp].push_back(string_list[i]);
-            }
-            else{
-                mp[temp].push_back(string_list[i]);
-            }
-            
+            mp[temp].push_back(string_list[i]);
+           
         }
+       
         vector<vector<string>> ans;
         
         for(auto it : mp){
