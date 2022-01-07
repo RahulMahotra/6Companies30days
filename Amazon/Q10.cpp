@@ -7,7 +7,7 @@ void matchPairs(char nuts[], char bolts[], int n) {
 	    for(int i = 0; i<n; i++){
 	        
 	        for(pair<char,int> &p : arr){
-	            if(nuts[i] == p.first) p.second = p.second++;
+	            if(nuts[i] == p.first) p.second = p.second + 1;
 	        }
 	        
 	    }
