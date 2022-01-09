@@ -1,7 +1,6 @@
   vector<int> v;
     vector<int> serialize(Node *root) 
     {
-        //Your code here
         if(root==NULL){
         v.push_back(-1);
         return v;
@@ -11,12 +10,9 @@
         serialize(root->right);
         return v;
     }
-    
-    //Function to deserialize a list and construct the tree.
     int i = 0;
     Node * deSerialize(vector<int> &A)
     {
-       //Your code here
        if(i >= A.size() || A[i]==-1){
            i++;
            return NULL;
