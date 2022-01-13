@@ -1,4 +1,6 @@
-vector<int> adj[N];
+bool isPossible(int N, vector<pair<int, int> >& prerequisites) {
+	   
+	    vector<int> adj[N];
 	    vector<int> degree0(N, 0);
 	    
 	    for(auto edge: prerequisites)
@@ -41,3 +43,4 @@ vector<int> adj[N];
 	    }
 	    
 	    return count == N;
+	}
