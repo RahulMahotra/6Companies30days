@@ -1,6 +1,6 @@
 int minSteps(int target){
         
-        int sum = 0, steps = 0;
+        int sum = 0, steps = 1;
         target = abs(target);
         
         while(sum < target){
