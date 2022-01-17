@@ -1,20 +1,22 @@
-vector<int> subarraySum(int arr[], int n, long long s)
+ vector<int> subarraySum(int arr[], int n, long long s)
     {
   
-        int low = 0, high = n-1, sum = 0, i = 0;
-        while(low <= high){
+        int j = 0, sum = 0, i = 0;
+        
+        while(i < n){
+            
             sum+=arr[i];
             
             if(sum == s){
-                return {low+1,i+1};
+                return {j+1,i+1};
             }
             
             if(sum > s){
                 while(sum > s){
-                    sum-=arr[low];
-                    low++;
+                    sum-=arr[j];
+                    j++;
                     if(sum == s){
-                        return {low+1,i+1};
+                        return {j+1,i+1};
                     }
                 }
             }
